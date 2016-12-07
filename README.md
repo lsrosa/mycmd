@@ -1,0 +1,2 @@
+# mycmd
+commands for linux
