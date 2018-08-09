@@ -2,9 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/leandro/.oh-my-zsh
+export ZSH=/home/leandro/.oh-my-zsh
 
-ZSH_THEME="superjarin"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -26,7 +26,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,7 +52,14 @@ plugins=(
   git
 )
 
+export DSEHOME=/home/leandro/makethemsuffer
+alias gitDSE='echo git -C $DSEHOME add -A $DSEHOME/DSE/*/*.c $DSEHOME/DSE/*/config.tcl $DSEHOME/DSE/*/plots $DSEHOME/DSE/*/lup.make $DSE/DSE/Makefile; git -C $DSEHOME commit -m "autocommit, sorry"; git -C $DSEHOME push origin master'
+
 source $ZSH/oh-my-zsh.sh
 
 export QUARTUS_HOME=/opt/IntelFPGA/16.1
 export PATH=$PATH:$QUARTUS_HOME/quartus/bin:$QUARTUS_HOME/modelsim_ase/bin:$QUARTUS_HOME/hld/bin
+
+export PATH=$PATH:/home/leandro/myLegUp/4.0/llvm/utils
+
+export LEGUPHOME=/home/leandro/myLegUp/4.0
