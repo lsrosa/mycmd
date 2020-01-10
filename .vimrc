@@ -1,7 +1,17 @@
-set tabstop=4 shiftwidth=4 
+set tabstop=4  
 set autoindent
 
-command! Untab set expandtab | retab | set noexpandtab 
+:set foldmethod=marker
+:set foldmarker=#if,#endif
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave ?* mkview | filetype detect
+    autocmd BufWinEnter ?* silent loadview | filetype detect
+augroup END
+
+
+command! Untab set expandtab | %retab! | set noexpandtab 
+command! Tab set noexpandtab | %retab! 
 
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
