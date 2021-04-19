@@ -1,5 +1,7 @@
-set tabstop=4  
-set autoindent
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 :set foldmethod=marker
 :set foldmarker=#if,#endif
@@ -9,9 +11,8 @@ augroup remember_folds
     autocmd BufWinEnter ?* silent loadview | filetype detect
 augroup END
 
-
-command! Untab set expandtab | %retab! | set noexpandtab 
-command! Tab set noexpandtab | %retab! 
+command! Untab set expandtab | %retab!
+command! Tab set noexpandtab | %retab! | set expandtab 
 
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
