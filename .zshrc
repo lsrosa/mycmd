@@ -73,20 +73,11 @@ plugins=(git)
 alias matlab="/home/leandro/Matlab/bin/matlab"
 
 #ROS2 enviroment
-function noetic(){
-    source /opt/ros/noetic/setup.zsh
-    if [[ $1 = "kuka" ]]; then
-        export ROS_MASTER_URI=http://192.180.1.5:30200
-        export ROS_IP=192.180.1.2
-        export ROS_HOSTNAME=192.180.1.5
-    fi
-}
+alias noetic="source /opt/ros/noetic/setup.zsh"
 alias iiwa="source ~/repos/iiwa/iiwa_ros/devel/setup.zsh"
-
-#alias ccd="colcon_cd"
-#source /usr/share/colcon_cd/function/colcon_cd.sh 
-#export _colcon_cd_root=~/ros2_galactic/ros2-linux
-#export ROS_DOMANIN_ID=101
+alias panda="export ROS_MASTER_URI=http://172.16.0.1;
+             export ROS_IP=http://172.16.0.10;
+             source ~/repos/panda/devel/setup.zsh;"
 
 source $ZSH/oh-my-zsh.sh
 
