@@ -75,10 +75,10 @@ alias matlab="/home/leandro/Matlab/bin/matlab"
 #ROS2 enviroment
 alias noetic="source /opt/ros/noetic/setup.zsh"
 alias iiwa="source ~/repos/iiwa/iiwa_ros/devel/setup.zsh"
-alias pandarobots="export ROS_MASTER_URI=http://172.16.0.1:11311;
-                   export ROS_IP=172.16.0.10;"
+alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
+             export ROS_IP=172.16.0.1;"
              
-alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
+#alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
                               
 source $ZSH/oh-my-zsh.sh      
                             
