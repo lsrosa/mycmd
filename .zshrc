@@ -69,6 +69,9 @@ plugins=(git)
 #plugins=(zsh_codex)
 #bindkey '^X' create_completion
 
+# Shutdown
+alias bn="sudo shutdown -h now"
+
 # Matlab stuff
 alias matlab="/home/leandro/Matlab/bin/matlab"
 
