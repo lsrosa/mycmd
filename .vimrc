@@ -1,7 +1,13 @@
 filetype plugin indent on
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Cursor finding type \c to highlight current line and column
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 :set foldmethod=marker
 :set foldmarker=#if,#endif

@@ -85,7 +85,7 @@ alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
                               
 source $ZSH/oh-my-zsh.sh      
                             
-PATH=$PATH:/home/leandro/.local/bin:/home/leandro/libraries/install/bin
+PATH=$PATH:/home/leandro/.local/bin:/home/leandro/libraries/install/bini:/opt/vim/bin
                               
 
 # >>> conda initialize >>>
