@@ -27,7 +27,12 @@ vim: python-base
 	make -C ~/repos/misc/vim-pydocstring
 
 writting:
-	sudo apt install texlive-full
+	sudo apt install -y texlive-full
+	sudo add-apt-repository ppa:sunderme/texstudio
+	sudo apt remove texstudio-doc texstudio-l10n
+	sudo apt update
+	sudo apt install -y texstudio
+	echo texstudio --version
 
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
