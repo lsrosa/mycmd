@@ -77,7 +77,7 @@ alias matlab="/home/leandro/Matlab/bin/matlab"
 
 #ROS2 enviroment
 alias noetic="source /opt/ros/noetic/setup.zsh"
-alias iiwa="source ~/repos/iiwa/iiwa_ros/devel/setup.zsh"
+alias iiwa="source ~/repos/kuka/iiwa_ros/devel/setup.zsh"
 alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
              export ROS_IP=172.16.0.1;"
              
