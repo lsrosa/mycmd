@@ -34,6 +34,19 @@ writting:
 	sudo apt install -y texstudio
 	echo texstudio --version
 
+noetic:
+	sudo apt install -y lsb
+	sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(shell lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+	curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+	sudo apt update
+	sudo apt install -y ros-noetic-desktop-full
+
+noetic_source:
+	# check http://wiki.ros.org/Installation/Source
+	sudo apt install -y lsb
+	sudo apt-get update
+	sudo apt install -y python3-rosdep2 python3-rosinstall-generator python3-vcstools 
+
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
 rbd_home = ~/repos/kuka/RBDyn
