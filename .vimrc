@@ -41,6 +41,8 @@ syntax on
 call plug#begin()
 " Docstrings plugin
 Plug '/home/leandro/repos/misc/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+" nerd tree
+Plug '/home/leandro/repos/misc/nerdtree'
 " Make sure you use single quotes
 call plug#end()
 

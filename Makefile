@@ -25,6 +25,11 @@ vim: python-base
 		git clone git@github.com:heavenshell/vim-pydocstring.git ~/repos/misc/vim-pydocstring; \
 	fi
 	make -C ~/repos/misc/vim-pydocstring
+	if [ -d ~/repos/misc/nerdtree ]; then \													
+		echo "nerdtree exists"; \
+	else \
+		git clone https://github.com/preservim/nerdtree.git ~/repos/misc/nerdtree; \
+	fi
 
 writting:
 	sudo apt install -y texlive-full
@@ -77,7 +82,7 @@ robotics_toolbox:
 		git clone https://github.com/petercorke/robotics-toolbox-python.git $(rbt_home)/roboticstoolbox-python; \
 	fi
 	pip install -e $(rbt_home)/roboticstoolbox-python
-    
+	
 
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
