@@ -83,6 +83,8 @@ robotics_toolbox:
 	fi
 	pip install -e $(rbt_home)/roboticstoolbox-python
 	
+cor_tud_deps:
+	pip install qpsolvers
 
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
@@ -90,7 +92,7 @@ rbd_home = ~/repos/kuka/RBDyn
 mc_home = ~/repos/kuka/mc_rbdyn_urdf
 corrade_home = ~/repos/kuka/corrade
 rc_home = ~/repos/kuka/robot_controllers
-cor_tud:
+cor_tud:cor_tud_deps
 	# kuka_fri
 	if [ -d $(kuka_fri_home) ]; then \
 		echo "kuka_fri exists"; \
