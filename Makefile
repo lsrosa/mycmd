@@ -10,7 +10,7 @@ zsh:
 	source ~/.zshrc
 
 python-base:
-	sudo apt install -y python3.10-venv python3-pip
+	sudo apt install -y python3-venv python3-pip
 	python -m pip install --upgrade pip
 
 vim: python-base
@@ -64,7 +64,7 @@ cor_tud:
 	$(kuka_fri_home)/waf -t $(kuka_fri_home)
 	sudo $(kuka_fri_home)/waf -t $(kuka_fri_home) install
 	# space vec alg
-	sudo apt install libeigen3-dev libboost1.74-all-dev
+	sudo apt install libeigen3-dev libboost-all-dev
 	if [ -d $(sva_home) ]; then \
 		echo "SpaceVecAlg exists"; \
 	else \
