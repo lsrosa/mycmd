@@ -47,6 +47,38 @@ noetic_source:
 	sudo apt-get update
 	sudo apt install -y python3-rosdep2 python3-rosinstall-generator python3-vcstools 
 
+rbt_home = ~/repos/kuka/rbt
+robotics_toolbox:
+	# swift
+	if [ -d $(rbt_home)/swift ]; then \
+		echo "swift exists"; \
+	else \
+		git clone https://github.com/jhavl/swift.git $(rbt_home)/swift; \
+	fi
+	pip install -e $(rbt_home)/swift
+	# spatial geometry
+	if [ -d $(rbt_home)/spatialgeometry ]; then \
+		echo "spatial geometry exists"; \
+	else \
+		git clone https://github.com/jhavl/spatialgeometry.git $(rbt_home)/spatialgeometry; \
+	fi
+	pip install -e $(rbt_home)/spatialgeometry
+	# spatial math
+	if [ -d $(rbt_home)/spatialmath-python ]; then \
+		echo "spatial math exists"; \
+	else \
+		git clone https://github.com/petercorke/spatialmath-python.git $(rbt_home)/spatialmath-python; \
+	fi
+	pip install -e $(rbt_home)/spatialmath-python
+	# robotics toolbox
+	if [ -d $(rbt_home)/roboticstoolbox-python ]; then \
+		echo "robotics toolbox exists"; \
+	else \
+		git clone https://github.com/petercorke/robotics-toolbox-python.git $(rbt_home)/roboticstoolbox-python; \
+	fi
+	pip install -e $(rbt_home)/roboticstoolbox-python
+    
+
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
 rbd_home = ~/repos/kuka/RBDyn
