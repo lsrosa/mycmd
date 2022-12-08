@@ -1,12 +1,17 @@
-all: base rcfiles vim writting cor_tud
+all: base zsh vim writting noetic cor_tud
 
 base:
-	sudo apt install -y build-essential git vim cmake zsh curl
+	sudo apt install -y build-essential git vim cmake zsh curl gcc-10 g++-10
 	sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 0
+	sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 0
+	sudo update-alternatives --config python
+	sudo update-alternatives --config gcc
+	sudo update-alternatives --config g++
 
+#sh -c "$(shell curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 zsh:
-	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	ln -s ~/repos/mycmd/.*rc ~/
+	ln -fs ~/repos/mycmd/.*rc ~/
 	source ~/.zshrc
 
 python-base:
@@ -25,7 +30,7 @@ vim: python-base
 		git clone git@github.com:heavenshell/vim-pydocstring.git ~/repos/misc/vim-pydocstring; \
 	fi
 	make -C ~/repos/misc/vim-pydocstring
-	if [ -d ~/repos/misc/nerdtree ]; then \													
+	if [ -d ~/repos/misc/nerdtree ]; then \
 		echo "nerdtree exists"; \
 	else \
 		git clone https://github.com/preservim/nerdtree.git ~/repos/misc/nerdtree; \
@@ -85,6 +90,7 @@ robotics_toolbox:
 	
 cor_tud_deps:
 	pip install qpsolvers
+	sudo apt install ros-noetic-ros-controllers
 
 kuka_fri_home = ~/repos/kuka/kuka_fri
 sva_home = ~/repos/kuka/SpaceVecAlg
@@ -92,7 +98,17 @@ rbd_home = ~/repos/kuka/RBDyn
 mc_home = ~/repos/kuka/mc_rbdyn_urdf
 corrade_home = ~/repos/kuka/corrade
 rc_home = ~/repos/kuka/robot_controllers
-cor_tud:cor_tud_deps
+
+howto_home = ~/repos/how-to
+howto:
+	if [ -d $(howto_home) ]; then \
+    	echo "How tos exists"; \
+    else \
+    	git clone git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/how-to.git $(howto_home); \
+    fi
+
+
+cor_tud:cor_tud_deps howto
 	# kuka_fri
 	if [ -d $(kuka_fri_home) ]; then \
 		echo "kuka_fri exists"; \
