@@ -71,6 +71,8 @@ plugins=(git)
 
 # Shutdown
 alias bn="sudo shutdown -h now"
+alias e="exit"
+alias ss="gnome-screenshot -a"
 
 # Matlab stuff
 alias matlab="/home/leandro/Matlab/bin/matlab"
@@ -87,3 +89,4 @@ source $ZSH/oh-my-zsh.sh
                             
 PATH=$PATH:/home/leandro/.local/bin:/home/leandro/libraries/install/bini:/opt/vim/bin
 
+export PATH="/home/leandro/Desktop/platformtools:$PATH"
