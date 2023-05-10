@@ -23,6 +23,8 @@ augroup END
 command! Untab set expandtab | %retab!
 command! Tab set noexpandtab | %retab! | set expandtab 
 
+let maplocalleader = "-"
+
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
@@ -50,3 +52,7 @@ call plug#end()
 " docstring
 nmap <silent> <C-_> <Plug>(pydocstring)
 let g:pydocstring_formatter = 'numpy'
+
+" jupyter vim
+nnoremap <buffer> <silent> <leader>r :JupyterSendCell<CR>
+nnoremap <buffer> <silent> <leader>j :JupyterConnect<CR>
