@@ -43,7 +43,8 @@ call plug#begin()
 Plug '/home/leandro/repos/misc/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " nerd tree
 Plug '/home/leandro/repos/misc/nerdtree'
-" Make sure you use single quotes
+" Jupyter Vim https://github.com/jupyter-vim/jupyter-vim
+Plug 'jupyter-vim/jupyter-vim'
 call plug#end()
 
 " docstring
