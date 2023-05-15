@@ -81,7 +81,8 @@ alias matlab="/home/leandro/Matlab/bin/matlab"
 alias noetic="source /opt/ros/noetic/setup.zsh"
 alias iiwa="source ~/repos/kuka/iiwa_ros/devel/setup.zsh"
 alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
-             export ROS_IP=172.16.0.1;"
+             export ROS_IP=172.16.0.33;
+             export ROS_HOSTNAME=172.16.0.33"
              
 #alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
                               
