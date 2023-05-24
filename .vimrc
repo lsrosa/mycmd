@@ -46,7 +46,7 @@ Plug '/home/leandro/repos/misc/vim-pydocstring', { 'do': 'make install', 'for': 
 " nerd tree
 Plug '/home/leandro/repos/misc/nerdtree'
 " Jupyter Vim https://github.com/jupyter-vim/jupyter-vim
-Plug 'jupyter-vim/jupyter-vim'
+Plug '/home/leandro/repos/misc/jupyter-vim'
 call plug#end()
 
 " docstring
