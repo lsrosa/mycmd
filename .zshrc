@@ -83,7 +83,7 @@ alias iiwa="source ~/repos/kuka/iiwa_ros/devel/setup.zsh"
 alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
              export ROS_IP=172.16.0.33;
              export ROS_HOSTNAME=172.16.0.33"
-             
+alias teri="source ~/repos/teri_ws/devel*/setup.zsh" 
 #alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
                               
 source $ZSH/oh-my-zsh.sh      
