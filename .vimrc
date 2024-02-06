@@ -40,19 +40,3 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 syntax on
 
-call plug#begin()
-" Docstrings plugin
-Plug '/home/leandro/repos/misc/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
-" nerd tree
-Plug '/home/leandro/repos/misc/nerdtree'
-" Jupyter Vim https://github.com/jupyter-vim/jupyter-vim
-Plug '/home/leandro/repos/misc/jupyter-vim'
-call plug#end()
-
-" docstring
-nmap <silent> <C-_> <Plug>(pydocstring)
-let g:pydocstring_formatter = 'numpy'
-
-" jupyter vim
-nnoremap <buffer> <silent> <leader>r :JupyterSendCell<CR>
-nnoremap <buffer> <silent> <leader>j :JupyterConnect<CR>
