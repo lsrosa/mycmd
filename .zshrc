@@ -74,6 +74,9 @@ alias bn="sudo shutdown -h now"
 alias e="exit"
 alias ss="gnome-screenshot -a"
 
+# Model Free RL
+alias mfrl="source ~/repos/model-free-rl/mfrl/bin/activate"
+
 # Matlab stuff
 alias matlab="/home/leandro/Matlab/bin/matlab"
 
