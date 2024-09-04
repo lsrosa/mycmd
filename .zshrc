@@ -74,11 +74,11 @@ alias bn="sudo shutdown -h now"
 alias e="exit"
 alias ss="gnome-screenshot -a"
 
-# Model Free RL
-alias mfrl="source ~/repos/model-free-rl/mfrl/bin/activate"
+# Traj Encoding Survey
+alias trajEncoding="source ~/repos/venvs/TrajEncodingSurvey/bin/activate"
 
-# Matlab stuff
-alias matlab="/home/leandro/Matlab/bin/matlab"
+# Model Free RL
+alias mfrl="source ~/repos/venvs/model-free-rl/mfrl/bin/activate"
 
 #ROS2 enviroment
 alias noetic="source /opt/ros/noetic/setup.zsh"
