@@ -75,10 +75,10 @@ alias e="exit"
 alias ss="gnome-screenshot -a"
 
 # Traj Encoding Survey
-alias trajEncoding="source ~/repos/venvs/TrajEncodingSurvey/bin/activate"
+alias trajEncoding="source ~/repos/traj-encoding-survey/bin/activate"
 
 # Model Free RL
-alias mfrl="source ~/repos/venvs/model-free-rl/mfrl/bin/activate"
+alias mfrl="source ~/repos/model-free-rl/mfrl/bin/activate"
 
 #ROS2 enviroment
 alias noetic="source /opt/ros/noetic/setup.zsh"
@@ -88,7 +88,11 @@ alias panda="export ROS_MASTER_URI=http://172.16.0.1:11311;
              export ROS_HOSTNAME=172.16.0.33"
 alias teri="source ~/repos/teri_ws/devel*/setup.zsh" 
 #alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
-                              
+
+# Unibo
+alias bernadette='ssh -i ~/.ssh/leandro_rsa leandro@bernadette.arces.unibo.it'
+alias amy='ssh -i ~/.ssh/leandro_rsa leandro@amy.arces.unibo.it'
+
 source $ZSH/oh-my-zsh.sh      
                             
 PATH=$PATH:/home/leandro/.local/bin:/home/leandro/libraries/install/bini:/opt/vim/bin
