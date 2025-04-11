@@ -1,3 +1,4 @@
+colorscheme industry
 filetype plugin indent on
 
 set tabstop=4
