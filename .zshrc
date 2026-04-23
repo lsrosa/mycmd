@@ -91,6 +91,8 @@ alias teri="source ~/repos/teri_ws/devel*/setup.zsh"
 
 # Unibo
 alias bernadette='ssh -i ~/.ssh/leandro_rsa leandro@bernadette.arces.unibo.it'
+alias agatha='ssh -i ~/.ssh/leandro_rsa leandro@agatha.arces.unibo.it'
+alias ssigpronavile='ssh -i .ssh/ssigpronavile leandro.desouzarosa@ssigpro.hpc.unibo.it'
 alias amy='ssh -i ~/.ssh/leandro_rsa leandro@amy.arces.unibo.it'
 alias xai="source ~/repos/XAI/xai-venv/bin/activate"
 source $ZSH/oh-my-zsh.sh      
