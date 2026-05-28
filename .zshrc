@@ -90,10 +90,10 @@ alias teri="source ~/repos/teri_ws/devel*/setup.zsh"
 #alias panda="source /home/leandro/repos/franka/franka_ros_TUD/devel/setup.zsh;"
 
 # Unibo
-alias bernadette='ssh -i ~/.ssh/leandro_rsa leandro@bernadette.arces.unibo.it'
-alias agatha='ssh -i ~/.ssh/leandro_rsa leandro@agatha.arces.unibo.it'
-alias ssigpronavile='ssh -i .ssh/ssigpronavile leandro.desouzarosa@ssigpro.hpc.unibo.it'
-alias amy='ssh -i ~/.ssh/leandro_rsa leandro@amy.arces.unibo.it'
+alias bernadette='ssh bernadette.arces'
+alias agatha='ssh agatha.arces'
+alias amy='ssh amy.arces'
+alias arthur='ssh arthur'
 alias xai="source ~/repos/XAI/xai-venv/bin/activate"
 source $ZSH/oh-my-zsh.sh      
                             

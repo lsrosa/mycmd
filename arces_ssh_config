@@ -1,0 +1,18 @@
+Host github.com
+    IdentityFile ~/.ssh/github_ed25519
+    IdentitiesOnly yes
+
+Host *.arces 
+    Hostname %h.unibo.it
+    User leandro 
+    IdentityFile ~/.ssh/arces_rsa
+
+Host ssigpronavile
+    Hostname ssigpro.hpc.unibo.it
+    IdentityFile ~/.ssh/ssigpronavile
+    User leandro.desouzarosa 
+
+Host arthur
+    Hostname arthur
+    User leandro
+    ProxyJump ssigpronavile
