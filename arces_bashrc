@@ -116,6 +116,7 @@ fi
 echo $- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
 export PATH="$PATH:/home/leandro/opt/"
 export PATH="$PATH:/home/leandro/opt/latex/bin/x86_64-linux"
+export PATH="$HOME/.local/bin:$PATH"
 alias xai="conda activate xai-venv"
 alias rfi="conda activate rfi"
 

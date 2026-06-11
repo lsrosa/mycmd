@@ -24,8 +24,6 @@ augroup END
 command! Untab set expandtab | %retab!
 command! Tab set noexpandtab | %retab! | set expandtab 
 
-let maplocalleader = "-"
-
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
@@ -41,3 +39,11 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 syntax on
 
+call plug#begin()
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'coder/claudecode.nvim'
+
+call plug#end()
+
+lua require("init")
