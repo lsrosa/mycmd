@@ -39,11 +39,3 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 syntax on
 
-call plug#begin()
-
-Plug 'nvim-lua/plenary.nvim'
-Plug 'coder/claudecode.nvim'
-
-call plug#end()
-
-lua require("init")
